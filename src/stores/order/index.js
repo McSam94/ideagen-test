@@ -6,6 +6,7 @@ import DummyOrders from './orders-sample'
 
 const STORE_NAME = 'ORDER_STORE'
 
+// eslint-disable-next-line react-hooks/rules-of-hooks
 export const { Context, Provider } = useReducerContext({
 	reducer: OrderReducer,
 	actions: {

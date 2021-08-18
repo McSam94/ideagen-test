@@ -124,10 +124,13 @@ const Filter = ({ toggleModal }) => {
 		reset(FORM_INIT_STATE)
 	}, [reset])
 
-	const applyFilter = useCallback((data) => {
-		filterOrders(data)
-		toggleModal()
-	}, [])
+	const applyFilter = useCallback(
+		(data) => {
+			filterOrders(data)
+			toggleModal()
+		},
+		[filterOrders, toggleModal]
+	)
 
 	return (
 		<>

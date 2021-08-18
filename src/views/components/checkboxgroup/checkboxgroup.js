@@ -18,31 +18,37 @@ const CheckboxGroup = forwardRef(
 
 		const [selectedValue, setSelectedValue] = useState(value ?? [])
 
-		const selectAll = useCallback((e) => {
-			const isChecked = e.target.checked
+		const selectAll = useCallback(
+			(e) => {
+				const isChecked = e.target.checked
 
-			setSelectedValue(() => {
-				const nextState = isChecked
-					? options?.map((option) => option?.value) ?? []
-					: []
+				setSelectedValue(() => {
+					const nextState = isChecked
+						? options?.map((option) => option?.value) ?? []
+						: []
 
-				onChange?.(nextState)
+					onChange?.(nextState)
 
-				return nextState
-			})
-		}, [])
+					return nextState
+				})
+			},
+			[onChange, options]
+		)
 
-		const selectOption = useCallback((value, isChecked) => {
-			setSelectedValue((prevState) => {
-				const nextState = isChecked
-					? [...prevState, value]
-					: [...prevState.filter((state) => state !== value)]
+		const selectOption = useCallback(
+			(option, isChecked) => {
+				setSelectedValue((prevState) => {
+					const nextState = isChecked
+						? [...prevState, option]
+						: [...prevState.filter((state) => state !== option)]
 
-				onChange?.(nextState)
+					onChange?.(nextState)
 
-				return nextState
-			})
-		}, [])
+					return nextState
+				})
+			},
+			[onChange]
+		)
 
 		useEffect(() => {
 			allRef.current.checked = selectedValue.length === options.length
@@ -52,7 +58,7 @@ const CheckboxGroup = forwardRef(
 					option.value
 				)
 			})
-		}, [selectedValue])
+		}, [selectedValue, options])
 
 		useEffect(() => {
 			setSelectedValue(value ?? [])
@@ -75,7 +81,7 @@ const CheckboxGroup = forwardRef(
 						key={index}
 						className="checkbox-group__item"
 						label={option.label}
-						value={selectedValue?.some((value) => value === option.value)}
+						value={selectedValue?.some((val) => val === option.value)}
 						onChange={(e) => selectOption(option.value, e.target.checked)}
 						disabled={disabled}
 					/>
@@ -94,7 +100,9 @@ CheckboxGroup.propTypes = {
 			label: PropTypes.string,
 			value: PropTypes.any
 		})
-	)
+	),
+	onChange: PropTypes.func,
+	disabled: PropTypes.bool
 }
 
 export default memo(CheckboxGroup)

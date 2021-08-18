@@ -1,4 +1,4 @@
-import React, { forwardRef, memo, useEffect, useRef } from 'react'
+import React, { forwardRef, memo } from 'react'
 import PropTypes from 'prop-types'
 import cn from 'classnames'
 
@@ -42,7 +42,8 @@ Input.propTypes = {
 	placeholder: PropTypes.string,
 	outline: PropTypes.bool,
 	underline: PropTypes.bool,
-	onChange: PropTypes.func
+	onChange: PropTypes.func,
+	error: PropTypes.string
 }
 
 export default memo(Input)

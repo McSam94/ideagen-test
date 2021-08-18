@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import { useCallback } from 'react'
 import { persistState } from 'Utils'
 import Constants from 'Configs/constants'

@@ -32,7 +32,8 @@ Dropdown.propTypes = {
 			value: PropTypes.string
 		})
 	),
-	value: PropTypes.string
+	value: PropTypes.string,
+	placeholder: PropTypes.string
 }
 
 export default memo(Dropdown)

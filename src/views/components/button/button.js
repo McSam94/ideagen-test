@@ -30,6 +30,7 @@ Button.propTypes = {
 	className: PropTypes.string,
 	labelClassName: PropTypes.string,
 	onClick: PropTypes.func,
+	disabled: PropTypes.bool,
 	primary: PropTypes.bool,
 	outline: PropTypes.bool
 }

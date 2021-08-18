@@ -55,6 +55,7 @@ const Table = ({ data, className, children }) => {
 
 Table.propTypes = {
 	columns: PropTypes.arrayOf(PropTypes.string),
+	className: PropTypes.string,
 	data: PropTypes.arrayOf(PropTypes.object).isRequired
 }
 

@@ -7,8 +7,7 @@ module.exports = {
 	env: {
 		es6: true,
 		node: true,
-		browser: true,
-		'jest/globals': true
+		browser: true
 	},
 	parserOptions: {
 		ecmaVersion: 2020,
@@ -24,7 +23,6 @@ module.exports = {
 			'error',
 			{ args: 'none', argsIgnorePattern: 'req|res|next|val' }
 		],
-		semi: 'error',
 		'no-use-before-define': 'error',
 		'prefer-const': 'error',
 		'no-console': 'warn',

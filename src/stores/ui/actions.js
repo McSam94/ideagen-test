@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import { useCallback } from 'react'
 
 export const uiAction = Object.freeze({

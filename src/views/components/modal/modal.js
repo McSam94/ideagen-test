@@ -29,7 +29,7 @@ const Modal = ({ isOpen, hide, children }) => {
 				closeModal()
 			}
 		},
-		[hide, overlayRef, modalRef]
+		[overlayRef, modalRef, closeModal]
 	)
 
 	useEffect(() => {

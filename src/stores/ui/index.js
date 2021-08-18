@@ -5,6 +5,7 @@ import { toggleModal } from './actions'
 
 const STORE_NAME = 'UI_STORE'
 
+// eslint-disable-next-line react-hooks/rules-of-hooks
 export const { Context, Provider } = useReducerContext({
 	reducer: UiReducer,
 	actions: {
