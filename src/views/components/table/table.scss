@@ -1,0 +1,55 @@
+$cell-width: 1.2rem;
+
+.idg-table {
+	&__header {
+		display: flex;
+		flex-direction: row;
+		padding: 1.2rem 0;
+		background-color: $accent;
+
+		&-col {
+			min-width: $cell-width;
+
+			&--center {
+				text-align: center;
+			}
+			&--left {
+				text-align: left;
+			}
+			&--right {
+				text-align: right;
+			}
+		}
+	}
+
+	&__content {
+		&-row {
+			display: flex;
+			flex-direction: row;
+			padding: 1.2rem 0;
+
+			&:nth-child(even) {
+				background-color: $grey;
+			}
+		}
+		&-col {
+			min-width: $cell-width;
+
+			&--center {
+				text-align: center;
+			}
+			&--left {
+				text-align: left;
+			}
+			&--right {
+				text-align: right;
+			}
+		}
+		&--empty {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 1.2rem 0;
+		}
+	}
+}

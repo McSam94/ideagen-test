@@ -1,0 +1,25 @@
+export default Object.freeze({
+	STATUS: {
+		OPEN: 0,
+		PROCESSING: 1,
+		ACCEPTED: 2,
+		REJECTED: 3
+	},
+	CATEGORY: {
+		ELECTRONICS: 0,
+		FURNITURE: 1,
+		STATIONERY: 2,
+		SPORTS: 3,
+		HARDWARE: 4
+	},
+	COUNTRY: {
+		UNITED_KINGDOM: 'UK',
+		RUSSIA: 'RU',
+		GERMAN: 'GR',
+		SINGAPORE: 'SG',
+		MALAYSIA: 'MY',
+		TAIWAN: 'TW',
+		CHINA: 'CN'
+	},
+	FILTER_KEY: '@FILTER_SESSION'
+})

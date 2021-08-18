@@ -1,0 +1,27 @@
+.idg-btn {
+	border-radius: 0.2rem;
+	height: 2.4rem;
+	display: flex;
+	width: min-content;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+
+	&:hover {
+		opacity: 0.8;
+	}
+	&__label {
+		padding: 0 1.2rem;
+	}
+	&--outline {
+		border: solid 1px $grey;
+	}
+
+	&--primary {
+		background-color: $primary;
+
+		& .idg-btn__label {
+			color: $white;
+		}
+	}
+}

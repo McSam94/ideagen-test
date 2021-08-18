@@ -1,0 +1,15 @@
+.idg-input {
+	border-style: solid;
+
+	&--error {
+		border-color: $error;
+	}
+	&__container {
+		display: flex;
+		flex-direction: column;
+	}
+	&__error {
+		color: $error;
+		font-size: small;
+	}
+}

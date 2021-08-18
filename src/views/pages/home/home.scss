@@ -1,0 +1,57 @@
+.home {
+	&__header {
+		margin: 1.2rem 2.4rem;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	&__table {
+		padding: 2.4rem;
+	}
+}
+
+.filter {
+	&__title {
+		font-weight: bold;
+		font-size: 1.6rem;
+	}
+	&__caption {
+		margin-top: 0.4rem;
+	}
+	&__content {
+		margin: 1.2rem 0;
+
+		&-row {
+			display: flex;
+			flex-direction: row;
+			margin: 1.2rem 0;
+		}
+		&-ranger {
+			margin-left: 1.2rem;
+			display: flex;
+			flex-direction: row;
+		}
+		&-input {
+			margin: 0 0.4rem;
+		}
+		&-customerName {
+			margin-left: 1.2rem;
+		}
+		&-country {
+			margin-left: 1.2rem;
+		}
+	}
+	&__footer {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+
+		&-right {
+			display: flex;
+			flex-direction: row;
+		}
+		&-btn {
+			margin: 0 0.6rem;
+		}
+	}
+}

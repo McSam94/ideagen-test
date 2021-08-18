@@ -1,0 +1,9 @@
+.idg-checkbox {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	&__label {
+		margin-left: 0.4rem;
+	}
+}
